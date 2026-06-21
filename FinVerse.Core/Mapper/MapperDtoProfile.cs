@@ -19,6 +19,7 @@ namespace FinVerse.Core.Mapper
             CreateMap<LoginResponseDto, LoginResponseEntity>().ReverseMap();
             CreateMap<CustomerDto, CustomerEntity>().ReverseMap();
             CreateMap<UsersDto, UsersEntity>().ReverseMap();
+            CreateMap<CustomerRegDetailsDto, CustomerRegDetailsEntity>().ReverseMap();
 
         }
     }

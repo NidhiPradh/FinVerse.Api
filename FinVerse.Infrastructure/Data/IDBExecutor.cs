@@ -12,6 +12,7 @@ namespace FinVerse.Infrastructure.Data
         Task<int> ExecuteNonQueryAsync(string storedProcedure, SqlParameter[] parameters = null);
         Task<T?> ExecuteScalarAsync<T>(string storedProcedure, SqlParameter[] parameters = null);
         Task<T?> ExecuteScalarInLineQueryAsync<T>(string query, SqlParameter[] parameters = null);
+        Task<List<T>> ExecuteReaderAsync<T>(string storedProcedure, Func<SqlDataReader, T> map, SqlParameter[] parameters = null);
         Task<List<T>> ExecuteReaderInLineAsync<T>(string storedProcedure, Func<SqlDataReader, T> map, SqlParameter[] parameters = null);
 
 

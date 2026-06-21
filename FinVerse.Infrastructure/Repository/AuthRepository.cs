@@ -63,7 +63,7 @@ namespace FinVerse.Infrastructure.Repository
         }
         public async Task<LoginResponseEntity?> LoginUserAsync(LoginRequestEntity loginRequest)
         {
-            const string sql = "select email, passwordHash, userName, userId from users where email = @email";
+            const string sql = "select email, roleId, userName, userId from users where email = @email";
 
                 var parameters = new SqlParameter[]
 
@@ -73,7 +73,7 @@ namespace FinVerse.Infrastructure.Repository
             var result = await _dbExecutor.ExecuteReaderInLineAsync<LoginResponseEntity>(sql, reader => new LoginResponseEntity
             {
                 Email = reader["email"].ToString(),
-                Password = reader["passwordHash"].ToString(),
+                RoleId = reader["roleId"] as int? ?? default(int),
                 UserName = reader["userName"].ToString(),
                 UserId = reader["userId"] as int? ?? default(int),
 
@@ -103,6 +103,45 @@ namespace FinVerse.Infrastructure.Repository
             }, parameters);
             var user = result.FirstOrDefault();
             return user;
+        }
+
+        public async Task<CustomerRegDetailsEntity?> GetCustomerByUserId(int? userId)
+        {
+            try
+            {
+                var parameter = new SqlParameter[]
+            {
+                new SqlParameter("@userId", userId)   
+                
+            };
+                var result = await _dbExecutor.ExecuteReaderAsync("SP_CustomerRegDetails",
+                                    reader => new CustomerRegDetailsEntity
+
+                                    {
+                                        CustomerId= reader["CustomerId"] as int? ?? default(int),
+                                        FirstName = reader["firstName"].ToString(),
+                                        LastName = reader["lastName"].ToString(),
+                                        Email = reader["email"].ToString(),
+                                        UserId = reader["userId"] as int? ?? default(int),
+                                        DOB = reader["DOB"] as DateTime? ?? default(DateTime),
+                                        PhoneNumber = reader["phoneNumber"].ToString(),
+                                        Gender = reader["Gender"].ToString(),
+                                        MaritalStatus = reader["MaritalStatus"].ToString(),
+                                        Nationality = reader["Nationality"].ToString(),
+                                        KYCStatus = reader["KYCStatus"].ToString(),
+                                        CreatedBy = reader["CreatedBy"] as int? ?? default(int),
+                                        RoleId = reader["roleId"] as int? ?? default(int),
+
+
+                                    }, parameter);
+                var user = result.FirstOrDefault();
+                return user;
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
     }
 }

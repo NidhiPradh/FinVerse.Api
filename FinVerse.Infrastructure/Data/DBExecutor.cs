@@ -134,6 +134,37 @@ namespace FinVerse.Infrastructure.Data
             }
         }
 
+        public async Task<List<T>> ExecuteReaderAsync<T>(string storedProcedure, Func<SqlDataReader, T> map, SqlParameter[] parameters = null)
+        {
+            try
+            {
+                using var connection = new SqlConnection(_connectionString);
+                using var command = new SqlCommand(storedProcedure, connection)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
 
+                if (parameters != null)
+                    command.Parameters.AddRange(parameters);
+
+                await connection.OpenAsync();
+
+                using var reader = await command.ExecuteReaderAsync();
+
+                var result = new List<T>();
+
+                while (await reader.ReadAsync())
+                {
+                    result.Add(map(reader));
+                }
+
+                return result;
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+                throw;
+            }
+        }
     }
 }

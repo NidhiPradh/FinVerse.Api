@@ -26,13 +26,13 @@ namespace FinVerse.Core.Service
             {
                  new Claim(JwtRegisteredClaimNames.Email, loginResponseDto.Email ?? ""),
                 //new Claim("FullName", loginResponseDto.FullName ?? ""),
-                //new Claim("RoleId", loginResponseDto.RoleId.ToString()),
+                new Claim("RoleId", loginResponseDto?.RoleId?.ToString()!),
                 //new Claim("RoleName", loginResponseDto.RoleName ?? ""),
                 //new Claim("UserId", loginResponseDto.UserId.ToString()),
                 new Claim("UserName", loginResponseDto.UserName ?? ""),
                 //new Claim(ClaimTypes.Name, loginResponseDto.UserName),
                 //new Claim(ClaimTypes.Email, loginResponseDto.Email),
-                new Claim("userId", loginResponseDto.UserId.ToString()),
+                new Claim("userId", loginResponseDto?.UserId?.ToString()!),
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
