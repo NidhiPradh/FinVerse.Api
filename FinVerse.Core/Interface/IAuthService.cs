@@ -13,6 +13,7 @@ namespace FinVerse.Core.Interface
       Task<string?> LoginUserAsync(LoginRequestDto loginRequestDto);
       Task<String> GenerateUserName(string? firstName, string? lastName);
       Task<UsersDto?> GetUserByUserId(int? userId);
+      Task<CustomerRegDetailsDto?> GetCustomerByUserId(int? userId);
 
 
 

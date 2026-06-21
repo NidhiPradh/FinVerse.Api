@@ -74,7 +74,31 @@ namespace FinVerse.Api.Controllers
                 return StatusCode(500, $"Internal server error: {ex.Message}");
 
             }
+
         }
+        //[Authorize]
+        [HttpGet("customer-by-user-id")]
+        public async Task<IActionResult> GetCustomerByUserId([FromQuery] string userId)
+        {
+            try
+            {              
+                int id = Convert.ToInt32(userId);
+                if (id == null || id == 0)
+                    return BadRequest("User id is not found.");
+
+                var result = await _authService.GetCustomerByUserId(id);
+                
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+
+            }
+
+        }
+
+
 
     }
 }

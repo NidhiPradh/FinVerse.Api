@@ -20,10 +20,10 @@ namespace FinVerse.Core.Service
             _customerRepository = customerRepository;
             _mapper = mapper;
         }    
-        public Task<bool> InsertCustomerAsync(CustomerDto customerDto)
+        public async Task<bool> InsertCustomerAsync(CustomerDto customerDto)
         {
             var customer = _mapper.Map<CustomerEntity>(customerDto) ;
-            var result = _customerRepository.InsertCustomerAsync(customer);
+            var result = await _customerRepository.InsertCustomerAsync(customer);
             return result;
         }
     }

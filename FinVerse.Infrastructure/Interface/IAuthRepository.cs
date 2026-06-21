@@ -13,6 +13,7 @@ namespace FinVerse.Infrastructure.Interface
         Task<int> CheckUsernameExists(string username);
         Task<LoginResponseEntity?> LoginUserAsync(LoginRequestEntity loginRequest);
         Task<UsersEntity?> GetUserByUserId(int? userId);
+        Task<CustomerRegDetailsEntity?> GetCustomerByUserId(int? userId);
 
 
 
