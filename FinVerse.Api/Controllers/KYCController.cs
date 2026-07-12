@@ -27,6 +27,7 @@ namespace FinVerse.Api.Controllers
             var result = await _kycService.UploadKycDetails(details);
             return Ok(result);
         }
+        //admin is validating the kyc documents and updating the status of the documents
         [HttpPost("valid-kyc-documents")]
         public async Task<IActionResult> ValidKycDetails([FromBody] KYCDetailsRo kycRo)
         {
