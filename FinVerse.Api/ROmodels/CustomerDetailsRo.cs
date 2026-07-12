@@ -20,6 +20,13 @@
         public string? AadharPath { get; set; }
         public string? PanImagePath { get; set; }
         public DateTime? SubmittedAt { get; set; }
+        //
+        public bool? VoterValid { get; set; }
+        public bool? SignatureValid { get; set; }
+        public bool? AadharValid { get; set; }
+        public bool? UserImageValid { get; set; }
+        public bool? PanImageValid { get; set; }
+        public string? Comments { get; set; }
     }
 
  }
