@@ -1,4 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using FinVerse.Api.ROmodels;
+using FinVerse.Core.Interface;
+using FinVerse.Core.models;
+using FinVerse.Core.Service;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FinVerse.Api.Controllers
@@ -7,5 +12,27 @@ namespace FinVerse.Api.Controllers
     [ApiController]
     public class KYCController : ControllerBase
     {
+        private readonly IMapper _mapper;
+        private readonly IKycService _kycService;
+
+        public KYCController(IMapper mapper, IKycService kycService)
+        {
+            _kycService = kycService;
+            _mapper = mapper;
+        }
+        [HttpPost("upload-kyc")]
+        public async Task<IActionResult> UploadKycDetails([FromForm] KYCDetailsRo kycRo)
+        {
+            var details = _mapper.Map<KYCDetailsDto>(kycRo);
+            var result = await _kycService.UploadKycDetails(details);
+            return Ok(result);
+        }
+        [HttpPost("valid-kyc-documents")]
+        public async Task<IActionResult> ValidKycDetails([FromBody] KYCDetailsRo kycRo)
+        {
+            var details = _mapper.Map<KYCDetailsDto>(kycRo);
+            var result = await _kycService.UploadKycDetails(details);
+            return Ok(result);
+        }
     }
 }

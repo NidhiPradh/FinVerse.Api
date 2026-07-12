@@ -24,4 +24,8 @@
     <ProjectReference Include="..\FinVerse.Core\FinVerse.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="UploadedFiles\" />
+  </ItemGroup>
+
 </Project>

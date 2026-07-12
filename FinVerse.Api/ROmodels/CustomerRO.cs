@@ -2,7 +2,7 @@
 
 namespace FinVerse.Api.ROmodels
 {
-    public class CustomerRO
+    public class CustomerRo
     {
         [Required]
         public int? UserId { get; set; }

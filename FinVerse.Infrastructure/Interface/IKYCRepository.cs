@@ -7,10 +7,9 @@ using System.Threading.Tasks;
 
 namespace FinVerse.Infrastructure.Interface
 {
-    public interface ICustomerRepository
+    public interface IKYCRepository
     {
-        Task<bool> InsertCustomerAsync(CustomerEntity customerEntity);
-        Task<List<CustomerDetailsEntity>> GetAllCustomerAsync();
+        Task<bool> UploadKycDetails(KYCDetailsEntity kycentity);
 
     }
 }
