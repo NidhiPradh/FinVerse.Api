@@ -19,12 +19,25 @@ namespace FinVerse.Core.Service
         {
             _customerRepository = customerRepository;
             _mapper = mapper;
-        }    
+        }
+
+        public async Task<List<CustomerDetailsDto>> GetAllCustomerAsync()
+        {
+            var customers = await _customerRepository.GetAllCustomerAsync();
+            var result = _mapper.Map<List<CustomerDetailsDto>>(customers);
+            return result;
+        }
+
         public async Task<bool> InsertCustomerAsync(CustomerDto customerDto)
         {
             var customer = _mapper.Map<CustomerEntity>(customerDto) ;
-            var result = await _customerRepository.InsertCustomerAsync(customer);
-            return result;
+            var age = customer.DOB.HasValue ? DateTime.Now.Year - customer.DOB.Value.Year : 0;
+            if(age >= 18)
+            {
+                var result = await _customerRepository.InsertCustomerAsync(customer);
+                return result;
+            }
+            throw new Exception("Customer must be at least 18 years old.");
         }
     }
 }

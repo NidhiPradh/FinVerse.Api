@@ -77,5 +77,12 @@ namespace FinVerse.Core.Service
             var result = await _authRepository.GetCustomerByUserId(userId);
             return _mapper.Map<CustomerRegDetailsDto>(result);
         }
+
+        public async Task<List<UsersDto?>> GetAllUsersAsync()
+        {
+            var user =  await _authRepository.GetAllUsersAsync();
+            var result =  _mapper.Map<List<UsersDto?>>(user);
+            return result;
+        }
     }
 }

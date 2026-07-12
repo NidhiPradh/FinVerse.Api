@@ -13,9 +13,11 @@ namespace FinVerse.Api.Mapper
             CreateMap<LoginRequestRo, LoginRequestDto>().ReverseMap();
             CreateMap<LoginResponseDto, LoginResponseEntity>().ReverseMap();
             CreateMap <LoginResponseEntity, LoginResponseRo>().ReverseMap();
-            CreateMap <CustomerDto,CustomerRO>().ReverseMap();
-            CreateMap<CustomerRegDetailsDto, CustomerRegDetailsRO>().ReverseMap();
-
+            CreateMap <CustomerDto,CustomerRo>().ReverseMap();
+            CreateMap<CustomerRegDetailsDto, CustomerRegDetailsRo>().ReverseMap();
+            CreateMap<UsersRo, UsersDto>().ReverseMap();
+            CreateMap<KYCDetailsRo, KYCDetailsDto>().ReverseMap();
+            CreateMap<CustomerDetailsRo, CustomerDetailsDto>().ReverseMap();
 
         }
 

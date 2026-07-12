@@ -14,7 +14,7 @@ namespace FinVerse.Infrastructure.Interface
         Task<LoginResponseEntity?> LoginUserAsync(LoginRequestEntity loginRequest);
         Task<UsersEntity?> GetUserByUserId(int? userId);
         Task<CustomerRegDetailsEntity?> GetCustomerByUserId(int? userId);
-
+        Task<List<UsersEntity?>> GetAllUsersAsync();
 
 
     }

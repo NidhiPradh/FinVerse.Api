@@ -97,7 +97,6 @@ namespace FinVerse.Infrastructure.Repository
                 FirstName = reader["firstName"].ToString(),
                 LastName = reader["lastName"].ToString(),
                 PhoneNumber = reader["phoneNumber"].ToString(),
-                PasswordHash = reader["passwordHash"].ToString(),
 
 
             }, parameters);
@@ -142,6 +141,24 @@ namespace FinVerse.Infrastructure.Repository
             {
                 throw new Exception(ex.Message);
             }
+        }
+
+        public Task<List<UsersEntity?>> GetAllUsersAsync()
+        {
+            var result = _dbExecutor.ExecuteReaderAsync("SP_GetAllUsers",
+                reader => new UsersEntity
+                {
+                    UserId = reader["userId"] as int? ?? default(int),
+                    Email = reader["email"].ToString(),
+                    FirstName = reader["firstName"].ToString(),
+                    LastName = reader["lastName"].ToString(),
+                    PhoneNumber = reader["phoneNumber"].ToString(),
+                    RoleId = reader["roleId"] as int? ?? default(int),
+                    IsActive = reader["isActive"] as bool? ?? default(bool),
+                    CreatedBy = reader["createdBy"] as int? ?? default(int),
+                    CreatedOn = reader["createdOn"] as DateTime? ?? default(DateTime),
+                },null);
+            return result;
         }
     }
 }

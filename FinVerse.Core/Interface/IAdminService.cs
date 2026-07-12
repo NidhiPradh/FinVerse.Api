@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace FinVerse.Core.Interface
 {
-    public interface ICustomerService
+    public interface IAdminService
     {
-        Task<bool> InsertCustomerAsync (CustomerDto customer);
-        Task<List<CustomerDetailsDto>> GetAllCustomerAsync();
+        Task<CustomerDetailsDto?> GetCustomerDetailsAsync(int CustomerId);
+
     }
 }

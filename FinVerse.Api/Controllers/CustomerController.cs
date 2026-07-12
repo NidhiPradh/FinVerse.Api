@@ -2,6 +2,7 @@
 using FinVerse.Api.ROmodels;
 using FinVerse.Core.Interface;
 using FinVerse.Core.models;
+using FinVerse.Core.Service;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -20,8 +21,8 @@ namespace FinVerse.Api.Controllers
             _mapper = mapper;
             _customerService = customerService;
         }
-        [HttpPost("Insert-Customer")]
-        public async Task<IActionResult> InsertCustomerAsync([FromBody] CustomerRO customerRO)
+        [HttpPost("insert-customer")]
+        public async Task<IActionResult> InsertCustomerAsync([FromBody] CustomerRo customerRO)
         {
             if (!ModelState.IsValid)
             {
@@ -49,6 +50,21 @@ namespace FinVerse.Api.Controllers
                 Success = false,
                 Message = "Failed to insert customer."
             });
+        }
+        [AllowAnonymous]
+        [HttpGet("get-all-customers")]
+        public async Task<IActionResult> GetAllCustomerAsync()
+        {
+            try
+            {
+                var customers = await _customerService.GetAllCustomerAsync();
+                var result = _mapper.Map<List<CustomerDetailsRo>>(customers);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
         }
     }
 

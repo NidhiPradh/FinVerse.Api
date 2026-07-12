@@ -97,6 +97,23 @@ namespace FinVerse.Api.Controllers
             }
 
         }
+        [Authorize]
+        [HttpGet("Get-all-users")]
+        public async Task<IActionResult> GetAllUsersAsync()
+        {
+            try
+            {
+                var users = await _authService.GetAllUsersAsync();
+                var result = _mapper.Map<List<UsersRo>>(users);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+      
+        
 
 
 

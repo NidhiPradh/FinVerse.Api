@@ -2,8 +2,6 @@
 using FinVerse.Infrastructure.Interface;
 using FinVerse.Infrastructure.models;
 using Microsoft.Data.SqlClient;
-using Microsoft.Identity.Client;
-using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,18 +10,20 @@ using System.Threading.Tasks;
 
 namespace FinVerse.Infrastructure.Repository
 {
-    public class CustomerRepository : ICustomerRepository
+    public class AdminRepository : IAdminRepository
     {
-        private readonly IDBExecutor _dbExecutor;
-        public CustomerRepository(IDBExecutor dbExecutor) 
+        private readonly IDBExecutor _executor;
+        public AdminRepository(IDBExecutor executor)
         {
-            _dbExecutor = dbExecutor;
+            _executor = executor;
         }
-
-        public async Task<List<CustomerDetailsEntity>> GetAllCustomerAsync()
+        public async Task<CustomerDetailsEntity?> GetCustomerDetailsAsync(int CustomerId)
         {
-
-            var result = await _dbExecutor.ExecuteReaderAsync("SP_GetAllCustomerDetails",
+            var parameter = new SqlParameter[]
+                {
+                    new SqlParameter("@CustomerId", CustomerId)
+                };
+            var result = await _executor.ExecuteReaderAsync("SP_GetCustomerDetails",
                 reader => new CustomerDetailsEntity
                 {
                     CustomerId = reader["CustomerId"] as int? ?? default(int),
@@ -43,27 +43,12 @@ namespace FinVerse.Infrastructure.Repository
                     SubmittedAt = reader["SubmittedAt"] as DateTime? ?? default(DateTime),
                     DOB = reader["DOB"] as DateTime? ?? default(DateTime),
 
-                }, null);
+                }, parameter);
 
-            return result;
-        }
+            return result.FirstOrDefault();
 
-        public async Task<bool> InsertCustomerAsync(CustomerEntity customerEntity)
-        {
-            var parameter = new SqlParameter[]
-                {
-                    new SqlParameter("@UserId", customerEntity.UserId),
-                    new SqlParameter("@DOB", customerEntity.DOB),
-                    new SqlParameter("@Gender", customerEntity.Gender),
-                    new SqlParameter("@MaritalStatus", customerEntity.MaritalStatus),
-                    new SqlParameter("@Nationality", customerEntity.Nationality),
-                    new SqlParameter("@KYCStatus", customerEntity.KYCStatus),
-                    new SqlParameter("@ProfileCompletionPercentage", customerEntity.ProfileCompletionPercentage)
-                    
-                };
 
-            var result =  await _dbExecutor.ExecuteNonQueryAsync("[SP_InsertCustomer]", parameter);
-            return result > 0;
+
         }
     }
 }
