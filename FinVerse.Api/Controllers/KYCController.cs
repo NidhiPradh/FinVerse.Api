@@ -35,5 +35,13 @@ namespace FinVerse.Api.Controllers
             var result = await _kycService.UploadKycDetails(details);
             return Ok(result);
         }
+        [HttpGet("get-kyc-documents")]
+        public async Task<IActionResult> GetKycDocByCustomerId(int customerID)
+        {
+            var result = await _kycService.GetKycDocByCustomerId(customerID);
+            var details = _mapper.Map<KYCDetailsRo>(customerID);
+
+            return Ok(result);
+        }
     }
 }

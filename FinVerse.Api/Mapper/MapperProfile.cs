@@ -18,6 +18,8 @@ namespace FinVerse.Api.Mapper
             CreateMap<UsersRo, UsersDto>().ReverseMap();
             CreateMap<KYCDetailsRo, KYCDetailsDto>().ReverseMap();
             CreateMap<CustomerDetailsRo, CustomerDetailsDto>().ReverseMap();
+            CreateMap<StatesRo, StatesDto>().ReverseMap();
+            CreateMap<DistrictRo, DistrictDto>().ReverseMap();
 
         }
 

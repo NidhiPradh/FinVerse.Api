@@ -18,6 +18,8 @@ namespace FinVerse.Api.ROmodels
         public int? RoleId { get; set; }
         [Required]
         public int? CustomerId { get; set; }
+        public int? StateId { get; set; }
+        public int? DistrictId { get; set; }
 
         public DateTime? DOB { get; set; }
 

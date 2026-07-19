@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FinVerse.Api.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CustomerController : ControllerBase 
@@ -66,6 +66,35 @@ namespace FinVerse.Api.Controllers
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
+        [HttpGet("get-all-states")]
+        public async Task<IActionResult> GetAllStatesAsync()
+        {
+            try
+            {
+                var states = await _customerService.GetAllStatesAsync();
+                var result = _mapper.Map<List<StatesRo>>(states);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+        [HttpGet("get-districts-by-state")]
+        public async Task<IActionResult> GetDisctrictByStateIdAsync([FromQuery] int stateId)
+        {
+            try
+            {
+                var districts = await _customerService.GetDistrictByStateIdAsync(stateId);
+                var result = _mapper.Map<List<DistrictRo>>(districts);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return (StatusCode(500, $"Internal server error: {ex.Message}"));
+            }
+        }
+
     }
 
 }

@@ -20,5 +20,8 @@ namespace FinVerse.Api.ROmodels
         public decimal? ProfileCompletionPercentage { get; set; }
 
         public DateTime? CreatedAt { get; set; }
+        public int? StateId { get; set; }
+        public int? DistrictId { get; set; }
+
     }
 }
