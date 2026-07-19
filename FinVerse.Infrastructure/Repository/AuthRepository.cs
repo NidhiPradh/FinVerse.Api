@@ -118,6 +118,8 @@ namespace FinVerse.Infrastructure.Repository
 
                                     {
                                         CustomerId= reader["CustomerId"] as int? ?? default(int),
+                                        StateId= reader["StateId"] as int? ?? default(int),
+                                        DistrictId= reader["DistrictId"] as int? ?? default(int),
                                         FirstName = reader["firstName"].ToString(),
                                         LastName = reader["lastName"].ToString(),
                                         Email = reader["email"].ToString(),

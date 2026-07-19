@@ -28,6 +28,20 @@ namespace FinVerse.Core.Service
             return result;
         }
 
+        public async Task<List<StatesDto>> GetAllStatesAsync()
+        {
+            var states = await _customerRepository.GetAllStatesAsync();
+            var result = _mapper.Map<List<StatesDto>>(states);
+            return result;
+        }
+
+        public async Task<List<DistrictDto>> GetDistrictByStateIdAsync(int stateId)
+        {
+            var district = await _customerRepository.GetDistrictByStateIdAsync(stateId);
+            var result = _mapper.Map<List<DistrictDto>>(district);
+            return result;
+        }
+
         public async Task<bool> InsertCustomerAsync(CustomerDto customerDto)
         {
             var customer = _mapper.Map<CustomerEntity>(customerDto) ;

@@ -9,7 +9,7 @@ namespace FinVerse.Infrastructure.Interface
 {
     public interface IKYCRepository
     {
-        Task<bool> UploadKycDetails(KYCDetailsEntity kycentity);
+        Task<bool> UploadKycDetails(KYCDetailsEntity kycentity, String KycStatus);
 
     }
 }

@@ -23,7 +23,8 @@ namespace FinVerse.Infrastructure.models
         public int? CustomerId { get; set; }
 
         public DateTime? DOB { get; set; }
-
+        public int? StateId { get; set; }
+        public int? DistrictId { get; set; }
         public string? Gender { get; set; }
 
         public string? MaritalStatus { get; set; }

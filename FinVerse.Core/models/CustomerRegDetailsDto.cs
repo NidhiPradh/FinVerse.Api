@@ -20,7 +20,9 @@ namespace FinVerse.Core.models
         public string? PhoneNumber { get; set; }
 
         public int? RoleId { get; set; }
-        
+        public int? StateId { get; set; }
+        public int? DistrictId { get; set; }
+
         public int? CustomerId { get; set; }
 
         public DateTime? DOB { get; set; }

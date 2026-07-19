@@ -18,13 +18,13 @@ namespace FinVerse.Infrastructure.Repository
         {
             _dbexecutor = dBExecutor;
         }
-        public async Task<bool> UploadKycDetails(KYCDetailsEntity kycEntity)
+        public async Task<bool> UploadKycDetails(KYCDetailsEntity kycEntity, String KycStatus)
         {
             var parameter = new SqlParameter[]
                 {
                     new SqlParameter("@UserId", kycEntity.UserId),
                     new SqlParameter("@KycId", kycEntity.KYCId),
-                    new SqlParameter("@VerificationStatus", "pending"),
+                    new SqlParameter("@VerificationStatus", KycStatus),
                     new SqlParameter("@SubmittedAt", DateTime.UtcNow),
                     //new SqlParameter("@VerifiedAt", kycEntity.VerifiedAt),
                     new SqlParameter("@CustomerId", kycEntity.CustomerId),

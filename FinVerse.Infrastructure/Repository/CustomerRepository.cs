@@ -48,6 +48,39 @@ namespace FinVerse.Infrastructure.Repository
             return result;
         }
 
+        public async Task<List<StatesEntity>> GetAllStatesAsync()
+        {
+            var result = await _dbExecutor.ExecuteReaderAsync("sp_GetAllStates",
+                            reader => new StatesEntity
+                            {
+                                StateId = reader["StateId"] as int? ?? default(int),
+                                StateName = reader["StateName"].ToString(),
+                                CountryId = reader["CountryId"] as int? ?? default(int),
+                                
+
+                            }, null);
+            return result;
+        }
+
+        public async Task<List<DistrictEntity>> GetDistrictByStateIdAsync(int stateId)
+        {
+            var parameter = new SqlParameter[]
+            {
+                new SqlParameter("@StateId", stateId)
+            };
+            var result = await _dbExecutor.ExecuteReaderAsync("SP_GetDistrictsByStateId",
+                reader => new DistrictEntity
+                {
+                    DistrictId = reader["DistrictId"] as int? ?? default(int),
+                    DistrictName = reader["DistrictName"].ToString(),
+                    StateId = reader["StateId"] as int? ?? default(int),
+                    CountryId = reader["CountryId"] as int? ?? default(int),
+                }, parameter);
+            return result;
+        }
+
+        
+
         public async Task<bool> InsertCustomerAsync(CustomerEntity customerEntity)
         {
             var parameter = new SqlParameter[]
@@ -58,6 +91,8 @@ namespace FinVerse.Infrastructure.Repository
                     new SqlParameter("@MaritalStatus", customerEntity.MaritalStatus),
                     new SqlParameter("@Nationality", customerEntity.Nationality),
                     new SqlParameter("@KYCStatus", customerEntity.KYCStatus),
+                    new SqlParameter("@StateId", customerEntity.StateId),
+                    new SqlParameter("@DistrictId", customerEntity.DistrictId),
                     new SqlParameter("@ProfileCompletionPercentage", customerEntity.ProfileCompletionPercentage)
                     
                 };

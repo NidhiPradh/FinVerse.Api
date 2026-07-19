@@ -10,5 +10,8 @@ namespace FinVerse.Core.Interface
     public interface IKycService
     {
         Task<bool> UploadKycDetails(KYCDetailsDto kycdto);
+        Task<List<KYCDetailsDto>> GetKycDocByCustomerId(int customerId);
+        
+
     }
 }

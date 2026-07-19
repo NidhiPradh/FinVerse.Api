@@ -11,6 +11,8 @@ namespace FinVerse.Infrastructure.Interface
     {
         Task<bool> InsertCustomerAsync(CustomerEntity customerEntity);
         Task<List<CustomerDetailsEntity>> GetAllCustomerAsync();
+        Task<List<StatesEntity>> GetAllStatesAsync();
+        Task<List<DistrictEntity>> GetDistrictByStateIdAsync(int stateId);
 
     }
 }

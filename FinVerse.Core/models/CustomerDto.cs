@@ -23,5 +23,8 @@ namespace FinVerse.Core.models
         public decimal? ProfileCompletionPercentage { get; set; }
 
         public DateTime? CreatedAt { get; set; }
+        public int? StateId { get; set; }
+        public int? DistrictId { get; set; }
+        
     }
 }

@@ -42,6 +42,12 @@ namespace FinVerse.Infrastructure.Repository
                     PanImagePath = reader["PanImagePath"].ToString(),
                     SubmittedAt = reader["SubmittedAt"] as DateTime? ?? default(DateTime),
                     DOB = reader["DOB"] as DateTime? ?? default(DateTime),
+                    VoterValid = reader["VoterValid"] as bool? ?? default(bool),
+                    SignatureValid = reader["SignatureValid"] as bool? ?? default(bool),
+                    AadharValid = reader["AadharValid"] as bool? ?? default(bool),
+                    UserImageValid = reader["UserImageValid"] as bool? ?? default(bool),
+                    PanImageValid = reader["PanImageValid"] as bool? ?? default(bool),
+                    Comments = reader["Comments"].ToString()
 
                 }, parameter);
 

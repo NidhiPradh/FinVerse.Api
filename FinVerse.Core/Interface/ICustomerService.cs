@@ -11,5 +11,7 @@ namespace FinVerse.Core.Interface
     {
         Task<bool> InsertCustomerAsync (CustomerDto customer);
         Task<List<CustomerDetailsDto>> GetAllCustomerAsync();
+        Task<List<StatesDto>> GetAllStatesAsync();
+        Task<List<DistrictDto>> GetDistrictByStateIdAsync(int stateId);
     }
 }
