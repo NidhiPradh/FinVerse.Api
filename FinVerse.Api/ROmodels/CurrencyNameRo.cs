@@ -19,5 +19,6 @@ namespace FinVerse.Api.ROmodels
         [JsonPropertyName("convertedValue")]
         public decimal? ConvertedValue { get; set; }
 
+
     }
 }
