@@ -13,7 +13,7 @@ namespace FinVerse.Core.Mapper
     {
         public MapperDtoProfile()
         {
-             CreateMap<RegisterRequestEntity, RegisterRequestDto>().ReverseMap();
+            CreateMap<RegisterRequestEntity, RegisterRequestDto>().ReverseMap();
             CreateMap<LoginRequestEntity, LoginRequestDto>().ReverseMap();
             CreateMap<LoginResponseEntity, LoginResponseDto>().ReverseMap();
             CreateMap<LoginResponseDto, LoginResponseEntity>().ReverseMap();
@@ -24,6 +24,11 @@ namespace FinVerse.Core.Mapper
             CreateMap<CustomerDetailsDto, CustomerDetailsEntity>().ReverseMap();
             CreateMap<StatesDto, StatesEntity>().ReverseMap();
             CreateMap<DistrictDto, DistrictEntity>().ReverseMap();
+            CreateMap<UserCustomerReportDto, UserCustomerReportEntity>().ReverseMap();
+            CreateMap<CustomerAll, Cutomers>().ReverseMap();
+            CreateMap<UserAll, Users>().ReverseMap();
+            CreateMap<CurrencyRateDto, CurrencyRateEntity>().ReverseMap();
+            CreateMap< CurrencyNameEntity, CurrencyNameDto>().ReverseMap();
 
         }
     }

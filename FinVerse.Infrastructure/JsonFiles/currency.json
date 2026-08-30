@@ -1,0 +1,666 @@
+[
+  {
+    "currencyName": "Angolan Kwanza",
+    "currencyCode": "AOA"
+  },
+  {
+    "currencyName": "Netherlands Antillean Guilder",
+    "currencyCode": "ANG"
+  },
+  {
+    "currencyName": "Armenian Dram",
+    "currencyCode": "AMD"
+  },
+  {
+    "currencyName": "Bahraini Dinar",
+    "currencyCode": "BHD"
+  },
+  {
+    "currencyName": "Albanian Lek",
+    "currencyCode": "ALL"
+  },
+  {
+    "currencyName": "Afghan Afghani",
+    "currencyCode": "AFN"
+  },
+  {
+    "currencyName": "Argentine Peso",
+    "currencyCode": "ARS"
+  },
+  {
+    "currencyName": "United Arab Emirates Dirham",
+    "currencyCode": "AED"
+  },
+  {
+    "currencyName": "Australian Dollar",
+    "currencyCode": "AUD"
+  },
+  {
+    "currencyName": "United States Dollar",
+    "currencyCode": "USD"
+  },
+  {
+    "currencyName": "Bulgarian Lev",
+    "currencyCode": "BGN"
+  },
+  {
+    "currencyName": "Bosnia-Herzegovina Convertible Mark",
+    "currencyCode": "BAM"
+  },
+  {
+    "currencyName": "Aruban Florin",
+    "currencyCode": "AWG"
+  },
+  {
+    "currencyName": "Azerbaijani Manat",
+    "currencyCode": "AZN"
+  },
+  {
+    "currencyName": "Bangladeshi Taka",
+    "currencyCode": "BDT"
+  },
+  {
+    "currencyName": "Barbadian Dollar",
+    "currencyCode": "BBD"
+  },
+  {
+    "currencyName": "Burundian Franc",
+    "currencyCode": "BIF"
+  },
+  {
+    "currencyName": "Brazilian Real",
+    "currencyCode": "BRL"
+  },
+  {
+    "currencyName": "Bahamian Dollar",
+    "currencyCode": "BSD"
+  },
+  {
+    "currencyName": "Bermudian Dollar",
+    "currencyCode": "BMD"
+  },
+  {
+    "currencyName": "Bhutanese Ngultrum",
+    "currencyCode": "BTN"
+  },
+  {
+    "currencyName": "Brunei Dollar",
+    "currencyCode": "BND"
+  },
+  {
+    "currencyName": "Bolivian Boliviano",
+    "currencyCode": "BOB"
+  },
+  {
+    "currencyName": "Belize Dollar",
+    "currencyCode": "BZD"
+  },
+  {
+    "currencyName": "Botswanan Pula",
+    "currencyCode": "BWP"
+  },
+  {
+    "currencyName": "Canadian Dollar",
+    "currencyCode": "CAD"
+  },
+  {
+    "currencyName": "Swiss Franc",
+    "currencyCode": "CHF"
+  },
+  {
+    "currencyName": "Unidad de Fomento",
+    "currencyCode": "CLF"
+  },
+  {
+    "currencyName": "Belarusian Ruble",
+    "currencyCode": "BYN"
+  },
+  {
+    "currencyName": "Congolese Franc",
+    "currencyCode": "CDF"
+  },
+  {
+    "currencyName": "Djiboutian Franc",
+    "currencyCode": "DJF"
+  },
+  {
+    "currencyName": "Danish Krone",
+    "currencyCode": "DKK"
+  },
+  {
+    "currencyName": "Chinese Yuan (Offshore)",
+    "currencyCode": "CNH"
+  },
+  {
+    "currencyName": "Chinese Yuan",
+    "currencyCode": "CNY"
+  },
+  {
+    "currencyName": "Colombian Peso",
+    "currencyCode": "COP"
+  },
+  {
+    "currencyName": "Chilean Peso",
+    "currencyCode": "CLP"
+  },
+  {
+    "currencyName": "Cuban Peso",
+    "currencyCode": "CUP"
+  },
+  {
+    "currencyName": "Czech Koruna",
+    "currencyCode": "CZK"
+  },
+  {
+    "currencyName": "Costa Rican Colón",
+    "currencyCode": "CRC"
+  },
+  {
+    "currencyName": "Cape Verdean Escudo",
+    "currencyCode": "CVE"
+  },
+  {
+    "currencyName": "Dominican Peso",
+    "currencyCode": "DOP"
+  },
+  {
+    "currencyName": "Falkland Islands Pound",
+    "currencyCode": "FKP"
+  },
+  {
+    "currencyName": "Algerian Dinar",
+    "currencyCode": "DZD"
+  },
+  {
+    "currencyName": "Gibraltar Pound",
+    "currencyCode": "GIP"
+  },
+  {
+    "currencyName": "Ghanaian Cedi",
+    "currencyCode": "GHS"
+  },
+  {
+    "currencyName": "Hong Kong Dollar",
+    "currencyCode": "HKD"
+  },
+  {
+    "currencyName": "Egyptian Pound",
+    "currencyCode": "EGP"
+  },
+  {
+    "currencyName": "Eritrean Nakfa",
+    "currencyCode": "ERN"
+  },
+  {
+    "currencyName": "Gambian Dalasi",
+    "currencyCode": "GMD"
+  },
+  {
+    "currencyName": "Honduran Lempira",
+    "currencyCode": "HNL"
+  },
+  {
+    "currencyName": "British Pound Sterling",
+    "currencyCode": "GBP"
+  },
+  {
+    "currencyName": "Ethiopian Birr",
+    "currencyCode": "ETB"
+  },
+  {
+    "currencyName": "Guernsey Pound",
+    "currencyCode": "GGP"
+  },
+  {
+    "currencyName": "Guatemalan Quetzal",
+    "currencyCode": "GTQ"
+  },
+  {
+    "currencyName": "Indonesian Rupiah",
+    "currencyCode": "IDR"
+  },
+  {
+    "currencyName": "Euro",
+    "currencyCode": "EUR"
+  },
+  {
+    "currencyName": "Guyanaese Dollar",
+    "currencyCode": "GYD"
+  },
+  {
+    "currencyName": "Georgian Lari",
+    "currencyCode": "GEL"
+  },
+  {
+    "currencyName": "Faroese Króna",
+    "currencyCode": "FOK"
+  },
+  {
+    "currencyName": "Hungarian Forint",
+    "currencyCode": "HUF"
+  },
+  {
+    "currencyName": "Croatian Kuna",
+    "currencyCode": "HRK"
+  },
+  {
+    "currencyName": "Manx Pound",
+    "currencyCode": "IMP"
+  },
+  {
+    "currencyName": "Fijian Dollar",
+    "currencyCode": "FJD"
+  },
+  {
+    "currencyName": "Icelandic Króna",
+    "currencyCode": "ISK"
+  },
+  {
+    "currencyName": "Iraqi Dinar",
+    "currencyCode": "IQD"
+  },
+  {
+    "currencyName": "Jamaican Dollar",
+    "currencyCode": "JMD"
+  },
+  {
+    "currencyName": "Kuwaiti Dinar",
+    "currencyCode": "KWD"
+  },
+  {
+    "currencyName": "Iranian Rial",
+    "currencyCode": "IRR"
+  },
+  {
+    "currencyName": "Indian Rupee",
+    "currencyCode": "INR"
+  },
+  {
+    "currencyName": "Japanese Yen",
+    "currencyCode": "JPY"
+  },
+  {
+    "currencyName": "Jersey Pound",
+    "currencyCode": "JEP"
+  },
+  {
+    "currencyName": "South Korean Won",
+    "currencyCode": "KRW"
+  },
+  {
+    "currencyName": "Kenyan Shilling",
+    "currencyCode": "KES"
+  },
+  {
+    "currencyName": "Comorian Franc",
+    "currencyCode": "KMF"
+  },
+  {
+    "currencyName": "Guinean Franc",
+    "currencyCode": "GNF"
+  },
+  {
+    "currencyName": "Cayman Islands Dollar",
+    "currencyCode": "KYD"
+  },
+  {
+    "currencyName": "Jordanian Dinar",
+    "currencyCode": "JOD"
+  },
+  {
+    "currencyName": "Kiribati Dollar",
+    "currencyCode": "KID"
+  },
+  {
+    "currencyName": "Haitian Gourde",
+    "currencyCode": "HTG"
+  },
+  {
+    "currencyName": "Kyrgyzstani Som",
+    "currencyCode": "KGS"
+  },
+  {
+    "currencyName": "Israeli New Shekel",
+    "currencyCode": "ILS"
+  },
+  {
+    "currencyName": "Lebanese Pound",
+    "currencyCode": "LBP"
+  },
+  {
+    "currencyName": "Kazakhstani Tenge",
+    "currencyCode": "KZT"
+  },
+  {
+    "currencyName": "Lao Kip",
+    "currencyCode": "LAK"
+  },
+  {
+    "currencyName": "Cambodian Riel",
+    "currencyCode": "KHR"
+  },
+  {
+    "currencyName": "Sri Lankan Rupee",
+    "currencyCode": "LKR"
+  },
+  {
+    "currencyName": "Lesotho Loti",
+    "currencyCode": "LSL"
+  },
+  {
+    "currencyName": "Liberian Dollar",
+    "currencyCode": "LRD"
+  },
+  {
+    "currencyName": "Moroccan Dirham",
+    "currencyCode": "MAD"
+  },
+  {
+    "currencyName": "Libyan Dinar",
+    "currencyCode": "LYD"
+  },
+  {
+    "currencyName": "Malagasy Ariary",
+    "currencyCode": "MGA"
+  },
+  {
+    "currencyName": "Moldovan Leu",
+    "currencyCode": "MDL"
+  },
+  {
+    "currencyName": "Macedonian Denar",
+    "currencyCode": "MKD"
+  },
+  {
+    "currencyName": "Mongolian Tögrög",
+    "currencyCode": "MNT"
+  },
+  {
+    "currencyName": "Myanmar Kyat",
+    "currencyCode": "MMK"
+  },
+  {
+    "currencyName": "Malaysian Ringgit",
+    "currencyCode": "MYR"
+  },
+  {
+    "currencyName": "Mauritian Rupee",
+    "currencyCode": "MUR"
+  },
+  {
+    "currencyName": "Mozambican Metical",
+    "currencyCode": "MZN"
+  },
+  {
+    "currencyName": "Namibian Dollar",
+    "currencyCode": "NAD"
+  },
+  {
+    "currencyName": "Nepalese Rupee",
+    "currencyCode": "NPR"
+  },
+  {
+    "currencyName": "Peruvian Sol",
+    "currencyCode": "PEN"
+  },
+  {
+    "currencyName": "Papua New Guinean Kina",
+    "currencyCode": "PGK"
+  },
+  {
+    "currencyName": "Macanese Pataca",
+    "currencyCode": "MOP"
+  },
+  {
+    "currencyName": "Maldivian Rufiyaa",
+    "currencyCode": "MVR"
+  },
+  {
+    "currencyName": "Mauritanian Ouguiya",
+    "currencyCode": "MRU"
+  },
+  {
+    "currencyName": "Mexican Peso",
+    "currencyCode": "MXN"
+  },
+  {
+    "currencyName": "Malawian Kwacha",
+    "currencyCode": "MWK"
+  },
+  {
+    "currencyName": "Norwegian Krone",
+    "currencyCode": "NOK"
+  },
+  {
+    "currencyName": "Nicaraguan Córdoba",
+    "currencyCode": "NIO"
+  },
+  {
+    "currencyName": "Nigerian Naira",
+    "currencyCode": "NGN"
+  },
+  {
+    "currencyName": "Omani Rial",
+    "currencyCode": "OMR"
+  },
+  {
+    "currencyName": "New Zealand Dollar",
+    "currencyCode": "NZD"
+  },
+  {
+    "currencyName": "Panamanian Balboa",
+    "currencyCode": "PAB"
+  },
+  {
+    "currencyName": "Philippine Peso",
+    "currencyCode": "PHP"
+  },
+  {
+    "currencyName": "Polish Złoty",
+    "currencyCode": "PLN"
+  },
+  {
+    "currencyName": "Paraguayan Guaraní",
+    "currencyCode": "PYG"
+  },
+  {
+    "currencyName": "Qatari Riyal",
+    "currencyCode": "QAR"
+  },
+  {
+    "currencyName": "Singapore Dollar",
+    "currencyCode": "SGD"
+  },
+  {
+    "currencyName": "Seychellois Rupee",
+    "currencyCode": "SCR"
+  },
+  {
+    "currencyName": "Russian Ruble",
+    "currencyCode": "RUB"
+  },
+  {
+    "currencyName": "Pakistani Rupee",
+    "currencyCode": "PKR"
+  },
+  {
+    "currencyName": "Serbian Dinar",
+    "currencyCode": "RSD"
+  },
+  {
+    "currencyName": "Surinamese Dollar",
+    "currencyCode": "SRD"
+  },
+  {
+    "currencyName": "Saint Helena Pound",
+    "currencyCode": "SHP"
+  },
+  {
+    "currencyName": "Sudanese Pound",
+    "currencyCode": "SDG"
+  },
+  {
+    "currencyName": "Romanian Leu",
+    "currencyCode": "RON"
+  },
+  {
+    "currencyName": "Rwandan Franc",
+    "currencyCode": "RWF"
+  },
+  {
+    "currencyName": "Sierra Leonean Leone",
+    "currencyCode": "SLE"
+  },
+  {
+    "currencyName": "Saudi Riyal",
+    "currencyCode": "SAR"
+  },
+  {
+    "currencyName": "Syrian Pound",
+    "currencyCode": "SYP"
+  },
+  {
+    "currencyName": "São Tomé and Príncipe Dobra",
+    "currencyCode": "STN"
+  },
+  {
+    "currencyName": "Solomon Islands Dollar",
+    "currencyCode": "SBD"
+  },
+  {
+    "currencyName": "Swedish Krona",
+    "currencyCode": "SEK"
+  },
+  {
+    "currencyName": "Sierra Leonean Leone (Old)",
+    "currencyCode": "SLL"
+  },
+  {
+    "currencyName": "Tajikistani Somoni",
+    "currencyCode": "TJS"
+  },
+  {
+    "currencyName": "Somali Shilling",
+    "currencyCode": "SOS"
+  },
+  {
+    "currencyName": "South Sudanese Pound",
+    "currencyCode": "SSP"
+  },
+  {
+    "currencyName": "Swazi Lilangeni",
+    "currencyCode": "SZL"
+  },
+  {
+    "currencyName": "Thai Baht",
+    "currencyCode": "THB"
+  },
+  {
+    "currencyName": "Turkmenistani Manat",
+    "currencyCode": "TMT"
+  },
+  {
+    "currencyName": "Tuvaluan Dollar",
+    "currencyCode": "TVD"
+  },
+  {
+    "currencyName": "New Taiwan Dollar",
+    "currencyCode": "TWD"
+  },
+  {
+    "currencyName": "Tanzanian Shilling",
+    "currencyCode": "TZS"
+  },
+  {
+    "currencyName": "Tunisian Dinar",
+    "currencyCode": "TND"
+  },
+  {
+    "currencyName": "Tongan Paʻanga",
+    "currencyCode": "TOP"
+  },
+  {
+    "currencyName": "Ukrainian Hryvnia",
+    "currencyCode": "UAH"
+  },
+  {
+    "currencyName": "Venezuelan Bolívar",
+    "currencyCode": "VES"
+  },
+  {
+    "currencyName": "Vanuatu Vatu",
+    "currencyCode": "VUV"
+  },
+  {
+    "currencyName": "Trinidad and Tobago Dollar",
+    "currencyCode": "TTD"
+  },
+  {
+    "currencyName": "Ugandan Shilling",
+    "currencyCode": "UGX"
+  },
+  {
+    "currencyName": "Uruguayan Peso",
+    "currencyCode": "UYU"
+  },
+  {
+    "currencyName": "Uzbekistani Som",
+    "currencyCode": "UZS"
+  },
+  {
+    "currencyName": "Turkish Lira",
+    "currencyCode": "TRY"
+  },
+  {
+    "currencyName": "Vietnamese Đồng",
+    "currencyCode": "VND"
+  },
+  {
+    "currencyName": "Caribbean Guilder",
+    "currencyCode": "XCG"
+  },
+  {
+    "currencyName": "CFP Franc",
+    "currencyCode": "XPF"
+  },
+  {
+    "currencyName": "Zambian Kwacha",
+    "currencyCode": "ZMW"
+  },
+  {
+    "currencyName": "Central African CFA Franc",
+    "currencyCode": "XAF"
+  },
+  {
+    "currencyName": "Special Drawing Rights",
+    "currencyCode": "XDR"
+  },
+  {
+    "currencyName": "West African CFA Franc",
+    "currencyCode": "XOF"
+  },
+  {
+    "currencyName": "Yemeni Rial",
+    "currencyCode": "YER"
+  },
+  {
+    "currencyName": "South African Rand",
+    "currencyCode": "ZAR"
+  },
+  {
+    "currencyName": "Zimbabwe Gold",
+    "currencyCode": "ZWG"
+  },
+  {
+    "currencyName": "East Caribbean Dollar",
+    "currencyCode": "XCD"
+  },
+  {
+    "currencyName": "Zimbabwean Dollar (Old)",
+    "currencyCode": "ZWL"
+  },
+  {
+    "currencyName": "Samoan Tala",
+    "currencyCode": "WST"
+  }
+]
