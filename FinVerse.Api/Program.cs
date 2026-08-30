@@ -69,7 +69,19 @@ builder.Services.AddScoped<IKycService, KycService>();
 builder.Services.AddScoped<IKYCRepository, KYCRepository>();
 builder.Services.AddScoped<IAdminRepository, AdminRepository>();
 builder.Services.AddScoped<IAdminService, AdminService>();
+builder.Services.AddScoped<IReportService, ReportService>();
+builder.Services.AddScoped<IReportRepository, ReportRepository>();
+builder.Services.AddScoped<IExchangeRatesRepository,ExchangeRatesRepository>();
+builder.Services.AddScoped<IExchangeRatesService, ExchangeRatesService>();
 builder.Services.AddControllers();
+builder.Services.AddHttpClient<ExternalApiService>((sp, client) =>
+{
+    var configuration = sp.GetRequiredService<IConfiguration>();
+    var baseUrl = configuration["ExternalApi:BaseUrl"];
+
+    client.BaseAddress = new Uri(baseUrl);
+    client.Timeout = TimeSpan.FromSeconds(30);
+});
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
